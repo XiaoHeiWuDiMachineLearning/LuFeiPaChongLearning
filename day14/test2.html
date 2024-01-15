@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="func1()">查看Location对象</button>
+    <button onclick="func2()">跳转到百度</button>
+    <button onclick="func3()">F5刷新页面</button>
+</body>
+<script>
+    /*
+    // window对象
+    console.log(window)
+    ret = window.confirm('小黑爱你吗')
+    console.log(ret)
+    // 消息输入框
+    var ret = window.prompt('enter msg:')
+    console.log(ret);
+    window.open('https://www.jd.com')
+     */
+    // location对象
+    function func1(){
+        console.log(location)
+    }
+    console.log(`协议=>${location.protocol}`);
+    console.log(`端口=>${location.port}`);
+    console.log(`域名=>${location.hostname}`);
+    console.log(`主机>${location.host}`);
+    console.log(`路径=>${location.pathname}`);
+    console.log(`查询字符串=>${location.search}`);
+    console.log(`锚点=>${location.hash}`);
+    console.log(`完整地址信息=>${location.href}`);
+
+    function func2(){
+        location.assign('https://www.baidu.com');
+    }
+    function func3(){
+        location.reload()
+    }
+</script>
+</html>

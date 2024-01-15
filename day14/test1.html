@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是js测试页面</title>
+</head>
+<body>
+    <a>我是测试文件</a>
+</body>
+<script>
+    // 写相关的js脚本程序代码
+    console.log('我是第一个js脚本程序');
+</script>
+<script src="test1.js"></script>
+<script>
+    /*
+    // number
+    var x = 10;
+    var y = 3.14;
+    console.log(x, typeof x);
+    console.log(y, typeof y);
+    // 字符串
+    var str1 = 'Hello world';
+    var str2 = new String('hello world');
+    console.log(str1, str2.toString());
+    console.log(str1.toUpperCase(), str2.toLowerCase())
+    console.log(str1.indexOf('e'), str1[0])
+    //正则匹配 语法:/正则表达式主体/修饰符(可选)
+    var str = '我的电话:13051885198, 你的电话:13522679785';
+    var rat = str.match(/\d{11}/gi);
+    console.log(rat);
+
+    //正则替换
+    var str1 = '我的电话:13522684978';
+    var ret1 = str1.replace(/(\d{3})\d{4}(\d{4})/, "$1****$2");
+    console.log(ret1);
+
+    // 字符串切片
+    var str = 'helloworld';
+    console.log(str.slice(3, 6));
+    // 字符串截取
+    var str = 'hello world';
+    var ret = str.substr(0, 3);
+    console.log(ret);
+    // 字符串去白
+    var password = '    小 黑我爱你    ';
+    var ret = password.trim();
+    console.log(password.length);
+    console.log(ret);
+    // 布尔值
+    console.log(true+1, false+1);
+
+    // 空值
+    var a;
+    console.log(a);
+    // 数据类型转换
+    var box1 = '100';
+    var ret = parseInt(box1)
+    console.log(ret, parseInt(3.14));
+    // 自动转换
+    var box1 = 1 + true;
+    console.log(box1);
+    var box2 = 1 + '200';
+    console.log(box2);
+    var box3 = 1 - '200';
+    console.log(box3);
+    // 逻辑判断
+    console.log(3 == 3.0, 3 === 3.0, 3 === '3', 3 == '3.0')
+    // for循环
+    for(var i = 0; i < 5; i++){
+        console.log(i);
+    }
+
+    // 数组对象
+    var arr = [1,2,3,4,5];
+    console.log(arr);
+    var new_arr = new Array(1,2,3);
+    new_arr.pop();
+    new_arr.push('a');
+    // object对象
+    var person = new Object();
+    person.name = 'alvin';
+    person.age = 18;
+    console.log(person);
+    var person = {
+        name: 'xiaohei',
+        age: 18,
+        say: function(){
+            alert(123);
+        }
+    }
+    console.log(person['say']());
+    // json序列化与反序列化
+    var person = {
+        name: 'xiaohei',
+        age: 18,
+        say: function(){
+            alert(123);
+        }
+    }
+    var str = JSON.stringify(person);
+    var ret = JSON.parse(str)
+    console.log(ret);
+    // Date对象
+    var nowd1 = new Date();
+    console.log(nowd1.toLocaleString());
+    var d2 = new Date('2004/3/20 11:12');
+    console.log(d2.toLocaleDateString());
+    var d3 = new Date('04/03/20 11:12');
+    console.log(d3.toLocaleDateString());
+
+    // 函数
+    function aaa(x, y){
+        return x + y;
+    }
+    // 匿名函数
+    (function (x, y){
+        console.log(x+y);
+    })(2, 3)
+    function bar(){
+        return function(){
+            console.log('inner 函数!!')
+        }
+    }
+    bar()();
+     */
+    // 箭头函数
+    var f = (a, b) => {
+        var result = a + b;
+        return result;
+    }
+    console.log(f(1,2));
+</script>
+</html>

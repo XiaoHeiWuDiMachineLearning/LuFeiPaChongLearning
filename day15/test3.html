@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // object 属性:值
+    var p1 = {
+        name:'xiaohei',
+        age:18
+    };
+    // console.log(p1.name);
+    // console.log(p1.age);
+    // 构建函数对象
+    // 函数的简易表达
+    function add(){
+        console.log('add...');
+    }
+    // new方式构建，正宗构建
+    var foo = new Function(args='console.log("小黑无敌")');
+    // foo()
+    // JS构建实例对象
+    class Person{
+        constructor(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        add(){
+            console.log('add...');
+        }
+    }
+    p1 = new Person('小黑', 18);
+    p2 = new Person('大黑驴', 19);
+    // console.log(p1.name);
+    // console.log(p2.name);
+    function Person1(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    p =  new Person1('小黑', 10);
+    // console.log(p.name);
+    Person.prototype.eat = function (){
+        console.log(this.name + '爱你哟');
+    }
+    p = new Person('小二黑', 100)
+    console.log(p.eat())
+</script>
+</html>

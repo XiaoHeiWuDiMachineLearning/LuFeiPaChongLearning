@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定事件</title>
+</head>
+<body>
+<div id="div" onclick="foo()">静态绑定</div>
+</body>
+<p id="i1">动态绑定</p>
+<button onclick="this.style.display='none'">点点我消失</button>
+<script>
+    function foo(){
+        console.log('foo函数');
+    }
+    var ele = document.getElementById('i1');
+    ele.onclick = function () {
+        console.log('ok!!!')
+    }
+    var x = this;
+    //console.log(x==window);
+    function myFunction(){
+        return this;
+    }
+    //console.log(myFunction())
+    var person = {
+        firstName:'小黑',
+        lastName:'无敌酒量',
+        id:'123455',
+        myFunction:myFunction
+    }
+    console.log(person.myFunction())
+</script>
+</html>

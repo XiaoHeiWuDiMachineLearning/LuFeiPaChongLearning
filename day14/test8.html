@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax请求初步</title>
+</head>
+<body>
+<div id="btn">小黑黑</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script>
+    var url = 'https://www.baidu.com/s?wd=%E5%B0%8F%E9%BB%91%E9%BB%91'
+    $('#btn').click(function() {
+        $.ajax({
+            type: 'GET',
+            url: url,
+            dataType: 'text',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        })
+    })
+</script>
+</html>

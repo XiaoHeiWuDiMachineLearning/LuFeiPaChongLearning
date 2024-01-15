@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery初步学习</title>
+</head>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<body>
+    <div id="d1">i am div tag</div>
+    <input type="text" class="tt">
+    <input type="text"  class="tt">
+</body>
+<script>
+    $('#d1').click(function(){
+        window.alert('点击了我');
+    })
+    $('.tt').blur(function(){
+        window.alert('作业写完了嘛');
+    })
+</script>
+</html>
