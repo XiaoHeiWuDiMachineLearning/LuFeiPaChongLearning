@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    引入css代码文件-->
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+
+<h3>Hello Alex!</h3>
+<p>当前时间：{{xxx}}</p>
+<p>四大名著：</p>
+<p></p>
+
+
+<!--js文件导入-->
+<script src="/static/index.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script>
+    // 获取四大名著
+    // js代码  JS：事件驱动
+    var dom = document.getElementsByTagName("p")[1]
+    dom.onclick = function () {
+
+
+
+
+        // 发送发ajax，应该JS的代码，但是JS
+        $.ajax({
+            url: "http://127.0.0.1:5000/books",
+            type: "get",
+            success: function (res) {
+                console.log("res:::", res)
+                // dom
+                var p3 = $("p").eq(2)
+                p3.html(res.join(","))
+
+            }
+        })
+
+
+    }
+</script>
+</body>
+</html>
